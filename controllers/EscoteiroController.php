@@ -9,6 +9,12 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+
+use yii\helpers\ArrayHelper;
+use app\models\Grupo;
+use app\models\Ramo;
+use app\models\Tropa;
+use app\models\Patrulha;
 /**
  * EscoteiroController implements the CRUD actions for Escoteiro model.
  */
@@ -70,13 +76,26 @@ class EscoteiroController extends Controller
     {
         $model = new Escoteiro();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        try {
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'idescoteiro' => $model->idescoteiro, 'idgrupo' => $model->idgrupo, 'idramo' => $model->idramo, 'idtropa' => $model->idtropa, 'idpatrulha' => $model->idpatrulha]);
+            }
+            
+        } catch (\yii\db\IntegrityException $e) {
+            
         }
 
-        return $this->render('create', [
-            'model' => $model,
-        ]);
+        //actionCreate
+        //$data = ArrayHelper::map(Grupo::find()->all(),'idgrupo','nome','numeral');
+        $arrayGrupo = ArrayHelper::map(Grupo::find()->all(), 'idgrupo', 'nome');   
+        $arrayRamo = ArrayHelper::map(Ramo::find()->all(), 'idramo', 'nome');    
+        $arrayTropa = ArrayHelper::map(Tropa::find()->all(), 'idtropa', 'nome'); 
+        $arrayPatrulha = ArrayHelper::map(Patrulha::find()->all(), 'idpatrulha', 'nome');   
+             
+        //$data = ArrayHelper::map(Escoteiro::find()->all(), 'idescoteiro', 'idgrupo', 'nome', 'idramo', 'idtropa');
+
+
+        return $this->render('create', ['arrayGrupo'=>$arrayGrupo,'model' => $model, 'ramos'=>$arrayRamo, 'tropas'=>$arrayTropa,'patrulhas'=>$arrayPatrulha ]);
     }
 
     /**

@@ -46,10 +46,10 @@ class Patrulha extends \yii\db\ActiveRecord
     {
         return [
             'idpatrulha' => Yii::t('app', 'Idpatrulha'),
-            'idtropa' => Yii::t('app', 'Idtropa'),
+            'idtropa' => Yii::t('app', 'Nome da Tropa'),
             'nome' => Yii::t('app', 'Nome'),
             'cores' => Yii::t('app', 'Cores'),
-            'gritodeguerra' => Yii::t('app', 'Gritodeguerra'),
+            'gritodeguerra' => Yii::t('app', 'Grito de Guerra'),
         ];
     }
 

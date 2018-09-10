@@ -61,16 +61,16 @@ class Escoteiro extends \yii\db\ActiveRecord
     {
         return [
             'idescoteiro' => Yii::t('app', 'Idescoteiro'),
-            'idgrupo' => Yii::t('app', 'Idgrupo'),
-            'idramo' => Yii::t('app', 'Idramo'),
-            'idtropa' => Yii::t('app', 'Idtropa'),
-            'idpatrulha' => Yii::t('app', 'Idpatrulha'),
+            'idgrupo' => Yii::t('app', 'Grupo'),
+            'idramo' => Yii::t('app', 'Ramo'),
+            'idtropa' => Yii::t('app', 'Tropa'),
+            'idpatrulha' => Yii::t('app', 'Patrulha'),
             'nome' => Yii::t('app', 'Nome'),
             'nascimento' => Yii::t('app', 'Nascimento'),
-            'cpf' => Yii::t('app', 'Cpf'),
-            'rg' => Yii::t('app', 'Rg'),
+            'cpf' => Yii::t('app', 'CPF'),
+            'rg' => Yii::t('app', 'RG'),
             'sexo' => Yii::t('app', 'Sexo'),
-            'registroueb' => Yii::t('app', 'Registroueb'),
+            'registroueb' => Yii::t('app', 'Registro UEB'),
             'estado' => Yii::t('app', 'Estado'),
         ];
     }

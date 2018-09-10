@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
+
+use kartik\select2\Select2;
 /* @var $this yii\web\View */
 /* @var $model app\models\Escoteiro */
 /* @var $form yii\widgets\ActiveForm */
@@ -12,13 +14,48 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'idgrupo')->textInput() ?>
 
-    <?= $form->field($model, 'idramo')->textInput() ?>
 
-    <?= $form->field($model, 'idtropa')->textInput() ?>
 
-    <?= $form->field($model, 'idpatrulha')->textInput() ?>
+    <?= $form->field($model, 'grupo')->
+    widget(Select2::classname(), [
+    'data' => $arrayGrupo,
+    'options' => ['placeholder' => Yii::t('app','Selecione o Seu Grupo ...')],
+    'pluginOptions' => [
+        'allowClear' => true
+    ],
+    ]);?>
+
+
+
+<?= $form->field($model, 'idramo')->
+    widget(Select2::classname(), [
+    'data' => $ramos,
+    'options' => ['placeholder' => Yii::t('app','Selecione o Seu Grupo ...')],
+    'pluginOptions' => [
+        'allowClear' => true
+    ],
+    ]);?>
+
+
+    <?= $form->field($model, 'idtropa')->
+    widget(Select2::classname(), [
+    'data' => $tropas,
+    'options' => ['placeholder' => Yii::t('app','Selecione o Seu Grupo ...')],
+    'pluginOptions' => [
+        'allowClear' => true
+    ],
+    ]);?>
+
+    <?= $form->field($model, 'idpatrulha')->
+    widget(Select2::classname(), [
+    'data' => $patrulhas,
+    'options' => ['placeholder' => Yii::t('app','Selecione o Seu Grupo ...')],
+    'pluginOptions' => [
+        'allowClear' => true
+    ],
+    ]);?>
+
 
     <?= $form->field($model, 'nome')->textInput(['maxlength' => true]) ?>
 

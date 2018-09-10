@@ -17,7 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Adms' => '',
+    'Adms' => 'Administradores',
     'Are you sure you want to delete this item?' => '',
     'Area Atuacaos' => '',
     'Atividades' => '',
