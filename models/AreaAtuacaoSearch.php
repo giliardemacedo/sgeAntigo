@@ -18,7 +18,11 @@ class AreaAtuacaoSearch extends AreaAtuacao
     public function rules()
     {
         return [
+<<<<<<< HEAD
+            [['idarea_atuacao'], 'integer'],
+=======
             [['idareaatuacao', 'idatividade', 'quantidade'], 'integer'],
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
             [['nome'], 'safe'],
         ];
     }
@@ -59,9 +63,13 @@ class AreaAtuacaoSearch extends AreaAtuacao
 
         // grid filtering conditions
         $query->andFilterWhere([
+<<<<<<< HEAD
+            'idarea_atuacao' => $this->idarea_atuacao,
+=======
             'idareaatuacao' => $this->idareaatuacao,
             'idatividade' => $this->idatividade,
             'quantidade' => $this->quantidade,
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
         ]);
 
         $query->andFilterWhere(['like', 'nome', $this->nome]);

@@ -26,7 +26,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'idcontato',
+<<<<<<< HEAD
+=======
             'idescoteiro',
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
             'numerotelefone',
             'email:email',
 

@@ -29,10 +29,19 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'idcaixa',
+<<<<<<< HEAD
+            'idgrupo',
+            'valor',
+            'data',
+            'responsavel',
+            'descricao',
+            'comprovante',
+=======
             'valor',
             'responsavel',
             'descricao',
             'data',
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
         ],
     ]) ?>
 

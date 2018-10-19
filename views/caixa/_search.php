@@ -17,6 +17,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'idcaixa') ?>
 
+<<<<<<< HEAD
+    <?= $form->field($model, 'idgrupo') ?>
+
+    <?= $form->field($model, 'valor') ?>
+
+    <?= $form->field($model, 'data') ?>
+
+    <?= $form->field($model, 'responsavel') ?>
+
+    <?php // echo $form->field($model, 'descricao') ?>
+
+    <?php // echo $form->field($model, 'comprovante') ?>
+=======
     <?= $form->field($model, 'valor') ?>
 
     <?= $form->field($model, 'responsavel') ?>
@@ -24,6 +37,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'descricao') ?>
 
     <?= $form->field($model, 'data') ?>
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>

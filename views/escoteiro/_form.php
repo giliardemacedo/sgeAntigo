@@ -2,9 +2,14 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+<<<<<<< HEAD
+use kartik\select2\Select2;
+
+=======
 
 
 use kartik\select2\Select2;
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
 /* @var $this yii\web\View */
 /* @var $model app\models\Escoteiro */
 /* @var $form yii\widgets\ActiveForm */
@@ -14,6 +19,12 @@ use kartik\select2\Select2;
 
     <?php $form = ActiveForm::begin(); ?>
 
+<<<<<<< HEAD
+    <?= $form->field($model, 'idsecao')->
+    widget(Select2::classname(), [
+    'data' => $arraySecao,
+    'options' => ['placeholder' => Yii::t('app','Selecione uma secao ...')],
+=======
 
 
 
@@ -42,11 +53,14 @@ use kartik\select2\Select2;
     widget(Select2::classname(), [
     'data' => $tropas,
     'options' => ['placeholder' => Yii::t('app','Selecione o Seu Grupo ...')],
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
     'pluginOptions' => [
         'allowClear' => true
     ],
     ]);?>
 
+<<<<<<< HEAD
+=======
     <?= $form->field($model, 'idpatrulha')->
     widget(Select2::classname(), [
     'data' => $patrulhas,
@@ -57,6 +71,7 @@ use kartik\select2\Select2;
     ]);?>
 
 
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
     <?= $form->field($model, 'nome')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'nascimento')->textInput() ?>
@@ -71,6 +86,13 @@ use kartik\select2\Select2;
 
     <?= $form->field($model, 'estado')->textInput() ?>
 
+<<<<<<< HEAD
+    <?= yii\base\View::render('@app/views/contato/_contato.php', ['model' => $arrayContato, 'form' => $form]) ?>
+
+    <?= yii\base\View::render('@app/views/endereco/_endereco.php', ['model' => $arrayEndereco, 'form' => $form]) ?>
+
+=======
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>

@@ -15,6 +15,12 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
+<<<<<<< HEAD
+    <?= $form->field($model, 'idarea_atuacao') ?>
+
+    <?= $form->field($model, 'nome') ?>
+
+=======
     <?= $form->field($model, 'idareaatuacao') ?>
 
     <?= $form->field($model, 'idatividade') ?>
@@ -23,6 +29,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'quantidade') ?>
 
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-default']) ?>

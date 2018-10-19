@@ -18,7 +18,11 @@ class ChefeSearch extends Chefe
     public function rules()
     {
         return [
+<<<<<<< HEAD
+            [['idchefe', 'idescoteiro'], 'integer'],
+=======
             [['idchefe', 'idadm', 'idescoteiro', 'caixa_idcaixa'], 'integer'],
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
             [['categoria'], 'safe'],
         ];
     }
@@ -60,9 +64,13 @@ class ChefeSearch extends Chefe
         // grid filtering conditions
         $query->andFilterWhere([
             'idchefe' => $this->idchefe,
+<<<<<<< HEAD
+            'idescoteiro' => $this->idescoteiro,
+=======
             'idadm' => $this->idadm,
             'idescoteiro' => $this->idescoteiro,
             'caixa_idcaixa' => $this->caixa_idcaixa,
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
         ]);
 
         $query->andFilterWhere(['like', 'categoria', $this->categoria]);

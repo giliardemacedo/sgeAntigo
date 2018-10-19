@@ -17,8 +17,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'idcontato') ?>
 
+<<<<<<< HEAD
+=======
     <?= $form->field($model, 'idescoteiro') ?>
 
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
     <?= $form->field($model, 'numerotelefone') ?>
 
     <?= $form->field($model, 'email') ?>

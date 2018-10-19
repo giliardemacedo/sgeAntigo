@@ -17,6 +17,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'idescoteiro') ?>
 
+<<<<<<< HEAD
+    <?= $form->field($model, 'idsecao') ?>
+
+    <?= $form->field($model, 'idcontato') ?>
+
+    <?= $form->field($model, 'idendereco') ?>
+
+    <?= $form->field($model, 'nome') ?>
+=======
     <?= $form->field($model, 'idgrupo') ?>
 
     <?= $form->field($model, 'idramo') ?>
@@ -26,6 +35,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'idpatrulha') ?>
 
     <?php // echo $form->field($model, 'nome') ?>
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
 
     <?php // echo $form->field($model, 'nascimento') ?>
 

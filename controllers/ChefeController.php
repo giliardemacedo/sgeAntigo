@@ -46,6 +46,17 @@ class ChefeController extends Controller
 
     /**
      * Displays a single Chefe model.
+<<<<<<< HEAD
+     * @param integer $idchefe
+     * @param integer $idescoteiro
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionView($idchefe, $idescoteiro)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($idchefe, $idescoteiro),
+=======
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -54,6 +65,7 @@ class ChefeController extends Controller
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
         ]);
     }
 
@@ -67,7 +79,11 @@ class ChefeController extends Controller
         $model = new Chefe();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+<<<<<<< HEAD
+            return $this->redirect(['view', 'idchefe' => $model->idchefe, 'idescoteiro' => $model->idescoteiro]);
+=======
             return $this->redirect(['view', 'id' => $model->idchefe]);
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
         }
 
         return $this->render('create', [
@@ -78,6 +94,19 @@ class ChefeController extends Controller
     /**
      * Updates an existing Chefe model.
      * If update is successful, the browser will be redirected to the 'view' page.
+<<<<<<< HEAD
+     * @param integer $idchefe
+     * @param integer $idescoteiro
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionUpdate($idchefe, $idescoteiro)
+    {
+        $model = $this->findModel($idchefe, $idescoteiro);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'idchefe' => $model->idchefe, 'idescoteiro' => $model->idescoteiro]);
+=======
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -88,6 +117,7 @@ class ChefeController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idchefe]);
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
         }
 
         return $this->render('update', [
@@ -98,6 +128,16 @@ class ChefeController extends Controller
     /**
      * Deletes an existing Chefe model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
+<<<<<<< HEAD
+     * @param integer $idchefe
+     * @param integer $idescoteiro
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionDelete($idchefe, $idescoteiro)
+    {
+        $this->findModel($idchefe, $idescoteiro)->delete();
+=======
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -105,6 +145,7 @@ class ChefeController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
 
         return $this->redirect(['index']);
     }
@@ -112,6 +153,16 @@ class ChefeController extends Controller
     /**
      * Finds the Chefe model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
+<<<<<<< HEAD
+     * @param integer $idchefe
+     * @param integer $idescoteiro
+     * @return Chefe the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    protected function findModel($idchefe, $idescoteiro)
+    {
+        if (($model = Chefe::findOne(['idchefe' => $idchefe, 'idescoteiro' => $idescoteiro])) !== null) {
+=======
      * @param integer $id
      * @return Chefe the loaded model
      * @throws NotFoundHttpException if the model cannot be found
@@ -119,6 +170,7 @@ class ChefeController extends Controller
     protected function findModel($id)
     {
         if (($model = Chefe::findOne($id)) !== null) {
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
             return $model;
         }
 

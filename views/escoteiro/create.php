@@ -14,6 +14,16 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+<<<<<<< HEAD
+	<?= $this->render('_form', [
+    	'arraySecao' => $arraySecao,
+        'model' => $model,
+        'arrayContato' => $arrayContato,
+        'arrayEndereco' => $arrayEndereco,
+    ]) ?>
+
+</div>
+=======
     <?= $this->render('_form', [
     	'arrayGrupo' => $arrayGrupo,
     	'ramos'=>$ramos,
@@ -23,3 +33,4 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
 
 </div>
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9

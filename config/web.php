@@ -12,6 +12,11 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+<<<<<<< HEAD
+        'request' => [
+            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+            'cookieValidationKey' => 'kJtUUNNAJ7xtTFCFdPn242-w5kRha1zn',
+=======
         'i18n' => [
             'translations' => [
                 'app*' => [
@@ -29,6 +34,7 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'OjmBZllPrloiwPfGItHY1vNygnQ1VlwX',
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -57,7 +63,10 @@ $config = [
             ],
         ],
         'db' => $db,
+<<<<<<< HEAD
+=======
         'language' => 'pt-BR',
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -87,4 +96,8 @@ if (YII_ENV_DEV) {
     ];
 }
 
+<<<<<<< HEAD
 return $config;
+=======
+return $config;
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9

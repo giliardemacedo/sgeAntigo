@@ -15,8 +15,13 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
+<<<<<<< HEAD
+        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->idcontato], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->idcontato], [
+=======
         <?= Html::a(Yii::t('app', 'Update'), ['update', 'idcontato' => $model->idcontato, 'idescoteiro' => $model->idescoteiro], ['class' => 'btn btn-primary']) ?>
         <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'idcontato' => $model->idcontato, 'idescoteiro' => $model->idescoteiro], [
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
@@ -29,7 +34,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'idcontato',
+<<<<<<< HEAD
+=======
             'idescoteiro',
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
             'numerotelefone',
             'email:email',
         ],

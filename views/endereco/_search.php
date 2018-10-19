@@ -17,8 +17,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'idendereco') ?>
 
+<<<<<<< HEAD
+=======
     <?= $form->field($model, 'idescoteiro') ?>
 
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
     <?= $form->field($model, 'logradouro') ?>
 
     <?= $form->field($model, 'bairro') ?>

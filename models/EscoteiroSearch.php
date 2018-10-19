@@ -18,7 +18,11 @@ class EscoteiroSearch extends Escoteiro
     public function rules()
     {
         return [
+<<<<<<< HEAD
+            [['idescoteiro', 'idsecao', 'idcontato', 'idendereco', 'estado'], 'integer'],
+=======
             [['idescoteiro', 'idgrupo', 'idramo', 'idtropa', 'idpatrulha', 'estado'], 'integer'],
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
             [['nome', 'nascimento', 'cpf', 'rg', 'sexo', 'registroueb'], 'safe'],
         ];
     }
@@ -60,10 +64,16 @@ class EscoteiroSearch extends Escoteiro
         // grid filtering conditions
         $query->andFilterWhere([
             'idescoteiro' => $this->idescoteiro,
+<<<<<<< HEAD
+            'idsecao' => $this->idsecao,
+            'idcontato' => $this->idcontato,
+            'idendereco' => $this->idendereco,
+=======
             'idgrupo' => $this->idgrupo,
             'idramo' => $this->idramo,
             'idtropa' => $this->idtropa,
             'idpatrulha' => $this->idpatrulha,
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
             'nascimento' => $this->nascimento,
             'estado' => $this->estado,
         ]);

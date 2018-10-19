@@ -18,7 +18,11 @@ class PatrulhaSearch extends Patrulha
     public function rules()
     {
         return [
+<<<<<<< HEAD
+            [['idpatrulha', 'idtropa', 'idsecao'], 'integer'],
+=======
             [['idpatrulha', 'idtropa'], 'integer'],
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
             [['nome', 'cores', 'gritodeguerra'], 'safe'],
         ];
     }
@@ -61,6 +65,10 @@ class PatrulhaSearch extends Patrulha
         $query->andFilterWhere([
             'idpatrulha' => $this->idpatrulha,
             'idtropa' => $this->idtropa,
+<<<<<<< HEAD
+            'idsecao' => $this->idsecao,
+=======
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
         ]);
 
         $query->andFilterWhere(['like', 'nome', $this->nome])

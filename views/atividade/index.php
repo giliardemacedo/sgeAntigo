@@ -4,7 +4,11 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
+<<<<<<< HEAD
+/* @var $searchModel app\models\AtividadeAtuacaoSearch */
+=======
 /* @var $searchModel app\models\AtividadeSearch */
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('app', 'Atividades');
@@ -26,12 +30,22 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'idatividade',
+<<<<<<< HEAD
+            'idarea_atuacao',
+            'idsecao',
+            'nome',
+            'descricao',
+            //'material',
+            //'tempoduracao',
+            //'localaplicacao',
+=======
             'idramo',
             'nomeatividade',
             'descricao',
             'material',
             //'tempoduracao',
             //'localapropriadoaplicacao',
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
