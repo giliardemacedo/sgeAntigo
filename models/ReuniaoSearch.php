@@ -18,8 +18,18 @@ class ReuniaoSearch extends Reuniao
     public function rules()
     {
         return [
+<<<<<<< HEAD
             [['idreuniao', 'grupo_idgrupo'], 'integer'],
             [['data', 'pauta'], 'safe'],
+=======
+<<<<<<< HEAD
+            [['idreuniao', 'idgrupo'], 'integer'],
+            [['data', 'pauta'], 'safe'],
+=======
+            [['idreuniao'], 'integer'],
+            [['data', 'pauta', 'reuniaocol'], 'safe'],
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ];
     }
 
@@ -60,11 +70,27 @@ class ReuniaoSearch extends Reuniao
         // grid filtering conditions
         $query->andFilterWhere([
             'idreuniao' => $this->idreuniao,
+<<<<<<< HEAD
             'data' => $this->data,
             'grupo_idgrupo' => $this->grupo_idgrupo,
         ]);
 
         $query->andFilterWhere(['like', 'pauta', $this->pauta]);
+=======
+<<<<<<< HEAD
+            'idgrupo' => $this->idgrupo,
+            'data' => $this->data,
+        ]);
+
+        $query->andFilterWhere(['like', 'pauta', $this->pauta]);
+=======
+            'data' => $this->data,
+        ]);
+
+        $query->andFilterWhere(['like', 'pauta', $this->pauta])
+            ->andFilterWhere(['like', 'reuniaocol', $this->reuniaocol]);
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 
         return $dataProvider;
     }

@@ -12,7 +12,16 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+<<<<<<< HEAD
     <?= $form->field($model, 'numero_telefone')->textInput(['maxlength' => true]) ?>
+=======
+<<<<<<< HEAD
+=======
+    <?= $form->field($model, 'idescoteiro')->textInput() ?>
+
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+    <?= $form->field($model, 'numerotelefone')->textInput(['maxlength' => true]) ?>
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 

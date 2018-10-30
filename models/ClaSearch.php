@@ -18,7 +18,11 @@ class ClaSearch extends Cla
     public function rules()
     {
         return [
+<<<<<<< HEAD
             [['idcla', 'secao_idsecao'], 'integer'],
+=======
+            [['idcla', 'idsecao'], 'integer'],
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
             [['nome'], 'safe'],
         ];
     }
@@ -60,7 +64,11 @@ class ClaSearch extends Cla
         // grid filtering conditions
         $query->andFilterWhere([
             'idcla' => $this->idcla,
+<<<<<<< HEAD
             'secao_idsecao' => $this->secao_idsecao,
+=======
+            'idsecao' => $this->idsecao,
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ]);
 
         $query->andFilterWhere(['like', 'nome', $this->nome]);

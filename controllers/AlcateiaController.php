@@ -9,8 +9,11 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+<<<<<<< HEAD
 use yii\helpers\ArrayHelper;
 use app\models\Secao;
+=======
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 /**
  * AlcateiaController implements the CRUD actions for Alcateia model.
  */
@@ -73,11 +76,16 @@ class AlcateiaController extends Controller
             return $this->redirect(['view', 'idalcateia' => $model->idalcateia, 'idsecao' => $model->idsecao]);
         }
 
+<<<<<<< HEAD
         $arraySecao = ArrayHelper::map(Secao::find()->all(), 'idsecao', 'nome');
 
         return $this->render('create', [
             'model' => $model,
             'arraySecao' => $arraySecao,
+=======
+        return $this->render('create', [
+            'model' => $model,
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ]);
     }
 

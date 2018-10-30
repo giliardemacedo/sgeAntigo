@@ -46,6 +46,10 @@ class AreaAtuacaoController extends Controller
 
     /**
      * Displays a single AreaAtuacao model.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -54,6 +58,20 @@ class AreaAtuacaoController extends Controller
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
+<<<<<<< HEAD
+=======
+=======
+     * @param integer $idareaatuacao
+     * @param integer $idatividade
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionView($idareaatuacao, $idatividade)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($idareaatuacao, $idatividade),
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ]);
     }
 
@@ -67,7 +85,15 @@ class AreaAtuacaoController extends Controller
         $model = new AreaAtuacao();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+<<<<<<< HEAD
             return $this->redirect(['view', 'id' => $model->idarea_atuacao]);
+=======
+<<<<<<< HEAD
+            return $this->redirect(['view', 'id' => $model->idarea_atuacao]);
+=======
+            return $this->redirect(['view', 'idareaatuacao' => $model->idareaatuacao, 'idatividade' => $model->idatividade]);
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         }
 
         return $this->render('create', [
@@ -78,6 +104,10 @@ class AreaAtuacaoController extends Controller
     /**
      * Updates an existing AreaAtuacao model.
      * If update is successful, the browser will be redirected to the 'view' page.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -88,6 +118,22 @@ class AreaAtuacaoController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idarea_atuacao]);
+<<<<<<< HEAD
+=======
+=======
+     * @param integer $idareaatuacao
+     * @param integer $idatividade
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionUpdate($idareaatuacao, $idatividade)
+    {
+        $model = $this->findModel($idareaatuacao, $idatividade);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'idareaatuacao' => $model->idareaatuacao, 'idatividade' => $model->idatividade]);
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         }
 
         return $this->render('update', [
@@ -98,6 +144,10 @@ class AreaAtuacaoController extends Controller
     /**
      * Deletes an existing AreaAtuacao model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -105,6 +155,19 @@ class AreaAtuacaoController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
+<<<<<<< HEAD
+=======
+=======
+     * @param integer $idareaatuacao
+     * @param integer $idatividade
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionDelete($idareaatuacao, $idatividade)
+    {
+        $this->findModel($idareaatuacao, $idatividade)->delete();
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 
         return $this->redirect(['index']);
     }
@@ -112,6 +175,10 @@ class AreaAtuacaoController extends Controller
     /**
      * Finds the AreaAtuacao model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
      * @param integer $id
      * @return AreaAtuacao the loaded model
      * @throws NotFoundHttpException if the model cannot be found
@@ -119,6 +186,19 @@ class AreaAtuacaoController extends Controller
     protected function findModel($id)
     {
         if (($model = AreaAtuacao::findOne($id)) !== null) {
+<<<<<<< HEAD
+=======
+=======
+     * @param integer $idareaatuacao
+     * @param integer $idatividade
+     * @return AreaAtuacao the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    protected function findModel($idareaatuacao, $idatividade)
+    {
+        if (($model = AreaAtuacao::findOne(['idareaatuacao' => $idareaatuacao, 'idatividade' => $idatividade])) !== null) {
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
             return $model;
         }
 

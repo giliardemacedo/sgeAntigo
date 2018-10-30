@@ -16,7 +16,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $this->render('_form', [
         'model' => $model,
+<<<<<<< HEAD
         'arraySecao' => $arraySecao,
+=======
+<<<<<<< HEAD
+        'arraySecao' => $arraySecao
+=======
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
     ]) ?>
 
 </div>

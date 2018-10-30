@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
+<<<<<<< HEAD
             //'idescoteiro',
             'nome',
             'nascimento',
@@ -38,6 +39,27 @@ $this->params['breadcrumbs'][] = $this->title;
             //'categoria_chefe',
             //'endereco_idendereco',
             //'contato_idcontato',
+=======
+            'idescoteiro',
+<<<<<<< HEAD
+            'idsecao',
+            'idcontato',
+            'idendereco',
+            'nome',
+=======
+            'idgrupo',
+            'idramo',
+            'idtropa',
+            'idpatrulha',
+            //'nome',
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+            //'nascimento',
+            //'cpf',
+            //'rg',
+            //'sexo',
+            //'registroueb',
+            //'estado',
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

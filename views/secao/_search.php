@@ -17,12 +17,20 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'idsecao') ?>
 
+<<<<<<< HEAD
+=======
+    <?= $form->field($model, 'idgrupo') ?>
+
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
     <?= $form->field($model, 'nome') ?>
 
     <?= $form->field($model, 'tipo') ?>
 
+<<<<<<< HEAD
     <?= $form->field($model, 'grupo_idgrupo') ?>
 
+=======
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-default']) ?>

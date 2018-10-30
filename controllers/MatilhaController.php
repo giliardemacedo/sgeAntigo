@@ -9,9 +9,12 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+<<<<<<< HEAD
 use yii\helpers\ArrayHelper;
 use app\models\Secao;
 use app\models\Alcateia;
+=======
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 /**
  * MatilhaController implements the CRUD actions for Matilha model.
  */
@@ -73,6 +76,7 @@ class MatilhaController extends Controller
             return $this->redirect(['view', 'id' => $model->idmatilha]);
         }
 
+<<<<<<< HEAD
         $arraySecao = ArrayHelper::map(Secao::find()->all(), 'idsecao','nome');
         $arrayAlcateia = ArrayHelper::map(Alcateia::find()->all(), 'idalcateia','nome');
 
@@ -80,6 +84,10 @@ class MatilhaController extends Controller
             'model' => $model,
             'arraySecao' => $arraySecao,
             'arrayAlcateia' => $arrayAlcateia,
+=======
+        return $this->render('create', [
+            'model' => $model,
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ]);
     }
 

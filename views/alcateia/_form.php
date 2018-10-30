@@ -3,7 +3,10 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
+<<<<<<< HEAD
 use kartik\select2\Select2;
+=======
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 /* @var $this yii\web\View */
 /* @var $model app\models\Alcateia */
 /* @var $form yii\widgets\ActiveForm */
@@ -13,6 +16,7 @@ use kartik\select2\Select2;
 
     <?php $form = ActiveForm::begin(); ?>
 
+<<<<<<< HEAD
     <?= $form->field($model, 'idsecao')->
         widget(Select2::classname(), [
             'data' => $arraySecao,
@@ -22,6 +26,9 @@ use kartik\select2\Select2;
             ],
         ]);
     ?>
+=======
+    <?= $form->field($model, 'idsecao')->textInput() ?>
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 
     <?= $form->field($model, 'nome')->textInput(['maxlength' => true]) ?>
 

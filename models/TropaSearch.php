@@ -18,7 +18,15 @@ class TropaSearch extends Tropa
     public function rules()
     {
         return [
+<<<<<<< HEAD
             [['idtropa', 'secao_idsecao'], 'integer'],
+=======
+<<<<<<< HEAD
+            [['idtropa', 'idsecao'], 'integer'],
+=======
+            [['idtropa'], 'integer'],
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
             [['nome'], 'safe'],
         ];
     }
@@ -60,7 +68,14 @@ class TropaSearch extends Tropa
         // grid filtering conditions
         $query->andFilterWhere([
             'idtropa' => $this->idtropa,
+<<<<<<< HEAD
             'secao_idsecao' => $this->secao_idsecao,
+=======
+<<<<<<< HEAD
+            'idsecao' => $this->idsecao,
+=======
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ]);
 
         $query->andFilterWhere(['like', 'nome', $this->nome]);

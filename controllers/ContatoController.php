@@ -46,6 +46,10 @@ class ContatoController extends Controller
 
     /**
      * Displays a single Contato model.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -54,6 +58,20 @@ class ContatoController extends Controller
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
+<<<<<<< HEAD
+=======
+=======
+     * @param integer $idcontato
+     * @param integer $idescoteiro
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionView($idcontato, $idescoteiro)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($idcontato, $idescoteiro),
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ]);
     }
 
@@ -67,7 +85,15 @@ class ContatoController extends Controller
         $model = new Contato();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+<<<<<<< HEAD
             return $this->redirect(['view', 'id' => $model->idcontato]);
+=======
+<<<<<<< HEAD
+            return $this->redirect(['view', 'id' => $model->idcontato]);
+=======
+            return $this->redirect(['view', 'idcontato' => $model->idcontato, 'idescoteiro' => $model->idescoteiro]);
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         }
 
         return $this->render('create', [
@@ -78,6 +104,10 @@ class ContatoController extends Controller
     /**
      * Updates an existing Contato model.
      * If update is successful, the browser will be redirected to the 'view' page.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -88,6 +118,22 @@ class ContatoController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idcontato]);
+<<<<<<< HEAD
+=======
+=======
+     * @param integer $idcontato
+     * @param integer $idescoteiro
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionUpdate($idcontato, $idescoteiro)
+    {
+        $model = $this->findModel($idcontato, $idescoteiro);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'idcontato' => $model->idcontato, 'idescoteiro' => $model->idescoteiro]);
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         }
 
         return $this->render('update', [
@@ -98,6 +144,10 @@ class ContatoController extends Controller
     /**
      * Deletes an existing Contato model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -105,6 +155,19 @@ class ContatoController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
+<<<<<<< HEAD
+=======
+=======
+     * @param integer $idcontato
+     * @param integer $idescoteiro
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionDelete($idcontato, $idescoteiro)
+    {
+        $this->findModel($idcontato, $idescoteiro)->delete();
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 
         return $this->redirect(['index']);
     }
@@ -112,6 +175,10 @@ class ContatoController extends Controller
     /**
      * Finds the Contato model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
      * @param integer $id
      * @return Contato the loaded model
      * @throws NotFoundHttpException if the model cannot be found
@@ -119,6 +186,19 @@ class ContatoController extends Controller
     protected function findModel($id)
     {
         if (($model = Contato::findOne($id)) !== null) {
+<<<<<<< HEAD
+=======
+=======
+     * @param integer $idcontato
+     * @param integer $idescoteiro
+     * @return Contato the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    protected function findModel($idcontato, $idescoteiro)
+    {
+        if (($model = Contato::findOne(['idcontato' => $idcontato, 'idescoteiro' => $idescoteiro])) !== null) {
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
             return $model;
         }
 

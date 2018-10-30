@@ -70,12 +70,29 @@ class SecaoController extends Controller
     {
         $model = new Secao();
 
+<<<<<<< HEAD
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idsecao]);
         }
 
 
         $arrayGrupo = ArrayHelper::map(Grupo::find()->all(), 'idgrupo', 'nome');
+=======
+        try {
+            if ($model->load(Yii::$app->request->post()) && $model->save()) 
+            {
+                return $this->redirect(['view', 
+                    'id' => $model->idsecao,
+                    'idgrupo' => $model->idgrupo
+                ]);
+            }
+            
+        } catch (\yii\db\IntegrityException $e) {
+            
+        }
+
+        $arrayGrupo = ArrayHelper::map(Grupo::find()->all(),'idgrupo', 'nome');
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 
         return $this->render('create', [
             'model' => $model,

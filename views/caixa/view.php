@@ -29,12 +29,26 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'idcaixa',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            'idgrupo',
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
             'valor',
             'data',
             'responsavel',
             'descricao',
             'comprovante',
+<<<<<<< HEAD
             'grupo_idgrupo',
+=======
+=======
+            'valor',
+            'responsavel',
+            'descricao',
+            'data',
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ],
     ]) ?>
 

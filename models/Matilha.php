@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "matilha".
  *
  * @property int $idmatilha
+<<<<<<< HEAD
  * @property string $nome
  * @property string $cores
  * @property int $alcateia_idalcateia
@@ -16,6 +17,11 @@ use Yii;
  * @property Alcateia $alcateiaIdalcateia
  * @property MatilhaHasEscoteiro[] $matilhaHasEscoteiros
  * @property Escoteiro[] $escoteiroIdescoteiros
+=======
+ * @property int $idalcateia
+ * @property int $idsecao
+ * @property string $nome
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
  */
 class Matilha extends \yii\db\ActiveRecord
 {
@@ -33,11 +39,17 @@ class Matilha extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+<<<<<<< HEAD
             [['nome', 'alcateia_idalcateia', 'alcateia_idsecao'], 'required'],
             [['alcateia_idalcateia', 'alcateia_idsecao'], 'integer'],
             [['nome'], 'string', 'max' => 80],
             [['cores'], 'string', 'max' => 45],
             [['alcateia_idalcateia', 'alcateia_idsecao'], 'exist', 'skipOnError' => true, 'targetClass' => Alcateia::className(), 'targetAttribute' => ['alcateia_idalcateia' => 'idalcateia', 'alcateia_idsecao' => 'idsecao']],
+=======
+            [['idalcateia', 'idsecao', 'nome'], 'required'],
+            [['idalcateia', 'idsecao'], 'integer'],
+            [['nome'], 'string', 'max' => 45],
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ];
     }
 
@@ -47,6 +59,7 @@ class Matilha extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
+<<<<<<< HEAD
             'idmatilha' => 'Idmatilha',
             'nome' => 'Nome',
             'cores' => 'Cores',
@@ -78,4 +91,12 @@ class Matilha extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Escoteiro::className(), ['idescoteiro' => 'escoteiro_idescoteiro'])->viaTable('matilha_has_escoteiro', ['matilha_idmatilha' => 'idmatilha']);
     }
+=======
+            'idmatilha' => Yii::t('app', 'Idmatilha'),
+            'idalcateia' => Yii::t('app', 'Idalcateia'),
+            'idsecao' => Yii::t('app', 'Idsecao'),
+            'nome' => Yii::t('app', 'Nome'),
+        ];
+    }
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 }

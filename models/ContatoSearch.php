@@ -18,8 +18,17 @@ class ContatoSearch extends Contato
     public function rules()
     {
         return [
+<<<<<<< HEAD
             [['idcontato'], 'integer'],
             [['numero_telefone', 'email'], 'safe'],
+=======
+<<<<<<< HEAD
+            [['idcontato'], 'integer'],
+=======
+            [['idcontato', 'idescoteiro'], 'integer'],
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+            [['numerotelefone', 'email'], 'safe'],
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ];
     }
 
@@ -60,9 +69,19 @@ class ContatoSearch extends Contato
         // grid filtering conditions
         $query->andFilterWhere([
             'idcontato' => $this->idcontato,
+<<<<<<< HEAD
         ]);
 
         $query->andFilterWhere(['like', 'numero_telefone', $this->numero_telefone])
+=======
+<<<<<<< HEAD
+=======
+            'idescoteiro' => $this->idescoteiro,
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+        ]);
+
+        $query->andFilterWhere(['like', 'numerotelefone', $this->numerotelefone])
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
             ->andFilterWhere(['like', 'email', $this->email]);
 
         return $dataProvider;

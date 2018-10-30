@@ -9,7 +9,15 @@ $this->title = Yii::t('app', 'Update Endereco: ' . $model->idendereco, [
     'nameAttribute' => '' . $model->idendereco,
 ]);
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Enderecos'), 'url' => ['index']];
+<<<<<<< HEAD
 $this->params['breadcrumbs'][] = ['label' => $model->idendereco, 'url' => ['view', 'id' => $model->idendereco]];
+=======
+<<<<<<< HEAD
+$this->params['breadcrumbs'][] = ['label' => $model->idendereco, 'url' => ['view', 'id' => $model->idendereco]];
+=======
+$this->params['breadcrumbs'][] = ['label' => $model->idendereco, 'url' => ['view', 'idendereco' => $model->idendereco, 'idescoteiro' => $model->idescoteiro]];
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
 <div class="endereco-update">

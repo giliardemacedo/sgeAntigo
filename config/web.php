@@ -12,9 +12,35 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+<<<<<<< HEAD
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '4_BM7qfCI8ri-9O-jeiRqcMD4aRxYE8M',
+=======
+<<<<<<< HEAD
+        'request' => [
+            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+            'cookieValidationKey' => 'kJtUUNNAJ7xtTFCFdPn242-w5kRha1zn',
+=======
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '@app/messages',
+                    'sourceLanguage' => 'en-US',
+                    'fileMap' => [
+                        'app' => 'app.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+            ],
+        ],
+
+        'request' => [
+            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+            'cookieValidationKey' => 'OjmBZllPrloiwPfGItHY1vNygnQ1VlwX',
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -43,6 +69,13 @@ $config = [
             ],
         ],
         'db' => $db,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        'language' => 'pt-BR',
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -72,4 +105,12 @@ if (YII_ENV_DEV) {
     ];
 }
 
+<<<<<<< HEAD
 return $config;
+=======
+<<<<<<< HEAD
+return $config;
+=======
+return $config;
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452

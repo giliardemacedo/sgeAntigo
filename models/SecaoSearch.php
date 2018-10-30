@@ -18,7 +18,11 @@ class SecaoSearch extends Secao
     public function rules()
     {
         return [
+<<<<<<< HEAD
             [['idsecao', 'grupo_idgrupo'], 'integer'],
+=======
+            [['idsecao', 'idgrupo'], 'integer'],
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
             [['nome', 'tipo'], 'safe'],
         ];
     }
@@ -60,7 +64,11 @@ class SecaoSearch extends Secao
         // grid filtering conditions
         $query->andFilterWhere([
             'idsecao' => $this->idsecao,
+<<<<<<< HEAD
             'grupo_idgrupo' => $this->grupo_idgrupo,
+=======
+            'idgrupo' => $this->idgrupo,
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ]);
 
         $query->andFilterWhere(['like', 'nome', $this->nome])

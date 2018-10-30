@@ -29,9 +29,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'idsecao',
+<<<<<<< HEAD
             'nome',
             'tipo',
             'grupo_idgrupo',
+=======
+            'idgrupo',
+            'nome',
+            'tipo',
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
         ],
     ]) ?>
 

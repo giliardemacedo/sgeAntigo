@@ -4,7 +4,15 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
+<<<<<<< HEAD
 /* @var $searchModel app\models\AtividadeSearch */
+=======
+<<<<<<< HEAD
+/* @var $searchModel app\models\AtividadeAtuacaoSearch */
+=======
+/* @var $searchModel app\models\AtividadeSearch */
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('app', 'Atividades');
@@ -26,6 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'idatividade',
+<<<<<<< HEAD
             'nome',
             'descricao',
             'material',
@@ -33,6 +42,24 @@ $this->params['breadcrumbs'][] = $this->title;
             //'localaplicacao',
             //'area_atuacao_idarea_atuacao',
             //'secao_idsecao',
+=======
+<<<<<<< HEAD
+            'idarea_atuacao',
+            'idsecao',
+            'nome',
+            'descricao',
+            //'material',
+            //'tempoduracao',
+            //'localaplicacao',
+=======
+            'idramo',
+            'nomeatividade',
+            'descricao',
+            'material',
+            //'tempoduracao',
+            //'localapropriadoaplicacao',
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

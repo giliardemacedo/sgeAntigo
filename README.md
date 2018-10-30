@@ -7,7 +7,15 @@
 </p>
 
 Yii 2 Basic Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
+<<<<<<< HEAD
 rapidly creating small projects.
+=======
+<<<<<<< HEAD
+rapidly creating small projects.
+=======
+rapidly creating small projects.fgfghffgf
+>>>>>>> b938ba62695bf55610eb244efd4a476152299ad9
+>>>>>>> 2a00d7fa99bedd462f3295d17d524fdd5f7ee452
 
 The template contains the basic features including user login/logout and a contact page.
 It includes all commonly used configurations that would allow you to focus on adding new
